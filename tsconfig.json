@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [],
+  "references": [
+    { "path": "packages/core" },
+    { "path": "packages/collectors" },
+    { "path": "packages/parsers" },
+    { "path": "packages/project-analyzer" },
+    { "path": "packages/resolvers" },
+    { "path": "packages/checkers" },
+    { "path": "packages/reporters" },
+    { "path": "packages/cli" },
+    { "path": "packages/action" }
+  ]
+}

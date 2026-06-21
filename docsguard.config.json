@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "include": [
+    "README.md",
+    "docs/**/*.md",
+    "examples/**/*",
+    "docs-guard-master-spec.md"
+  ],
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.git/**"
+  ],
+  "failOn": "high",
+  "reporters": [
+    "terminal",
+    "json"
+  ],
+  "output": {
+    "json": ".docsguard/report.json"
+  },
+  "checkers": {
+    "syntax-js-ts": true,
+    "syntax-json-yaml": true,
+    "package-script-exists": true,
+    "export-reference-exists": true,
+    "env-key-known": true,
+    "cli-command-known": true
+  },
+  "overrides": [
+    {
+      "files": ["docs-guard-master-spec.md", "README.md"],
+      "disable": ["package-script-exists", "cli-command-known"]
+    }
+  ]
+}

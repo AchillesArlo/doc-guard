@@ -1,0 +1,34 @@
+name: 'Docs Guard'
+description: 'CI guardrail to ensure open source documentation remains synchronized with codebase'
+author: 'Docs Guard Team'
+branding:
+  icon: 'shield'
+  color: 'blue'
+inputs:
+  config:
+    description: 'Path to the Docs Guard configuration file'
+    required: false
+  fail-on:
+    description: 'Severity threshold to fail the build (info, low, medium, high, critical)'
+    required: false
+    default: 'high'
+  changed-only:
+    description: 'Only validate files changed in Git relative to the base ref'
+    required: false
+    default: 'false'
+  base-ref:
+    description: 'Base git reference for changed-only comparison'
+    required: false
+  head-ref:
+    description: 'Head git reference for changed-only comparison'
+    required: false
+  write-summary:
+    description: 'Write Markdown summary results to GitHub Step Summary'
+    required: false
+    default: 'true'
+  output-json:
+    description: 'Path to write the machine-readable JSON scan report'
+    required: false
+runs:
+  using: 'node20'
+  main: 'dist/main.js'

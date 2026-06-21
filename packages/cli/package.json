@@ -1,0 +1,36 @@
+{
+  "name": "@docs-guard/cli",
+  "version": "1.0.0",
+  "description": "Command line interface for Docs Guard",
+  "type": "module",
+  "bin": {
+    "docsguard": "./dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@docs-guard/collectors": "workspace:*",
+    "@docs-guard/core": "workspace:*",
+    "@docs-guard/parsers": "workspace:*",
+    "@docs-guard/project-analyzer": "workspace:*",
+    "@docs-guard/checkers": "workspace:*",
+    "@docs-guard/reporters": "workspace:*",
+    "cac": "^6.7.14"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  }
+}

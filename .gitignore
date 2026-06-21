@@ -1,0 +1,40 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+build/
+.turbo/
+
+# Report outputs
+.docsguard/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Test coverage
+coverage/
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Agent exclusions & memory
+AGENT.md
+CLAUDE.md
+.agent-mem/
+.agent/
+.brainsync/
+.gemini/
+.cline/
+.cursorrules
+.clineRules
+.windsurfrules
+node_modules
