@@ -3,8 +3,7 @@
   "include": [
     "README.md",
     "docs/**/*.md",
-    "examples/**/*",
-    "docs-guard-master-spec.md"
+    "examples/**/*"
   ],
   "exclude": [
     "**/node_modules/**",
@@ -30,7 +29,7 @@
   },
   "overrides": [
     {
-      "files": ["docs-guard-master-spec.md", "README.md"],
+      "files": ["docs/spec.md", "README.md"],
       "disable": ["package-script-exists", "cli-command-known"]
     }
   ]
